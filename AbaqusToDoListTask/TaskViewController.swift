@@ -16,6 +16,7 @@ class TaskViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var taskIdArray : [Int] = []
     var setSelected = false
+    var changeState = true
     override func viewDidLoad() {
         super.viewDidLoad()
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender:)))
@@ -98,6 +99,7 @@ class TaskViewController: UIViewController {
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
+            taskIdArray = []
             self.navigationItem.rightBarButtonItem?.isEnabled = true
             self.navigationItem.rightBarButtonItem?.tintColor = UIColor.blue
             
@@ -144,7 +146,26 @@ class TaskViewController: UIViewController {
             }
         })
     }
-    
+    @objc func cancelChangingState() {
+        changeState = false
+        tableView.reloadData()
+    }
+    func changeSate(id: Int, name : String) {
+        if changeState {
+            
+            let taskModel : TasksModel = TasksModel(id: id, task: name, state: taskSegmentControl.selectedSegmentIndex == 0 ? 1 : 0)
+            CoreDataManager.shared.saveTaskData(taskModel: taskModel)
+            viewModel?.reloadTasks(completionHandler: { (result) in
+                       DispatchQueue.main.async {
+                           if result {
+                               //  self.loader.hideOverlayView()
+                               self.tableView.reloadData()
+                           }
+                       }
+                   })
+            
+        }
+    }
 }
 extension TaskViewController : UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view data source
@@ -183,15 +204,28 @@ extension TaskViewController : UITableViewDelegate, UITableViewDataSource {
         cell.accessoryType = UITableViewCell.AccessoryType.none
 
         cell.textLabel!.text = viewModel?.getTaskName(for: indexPath, status: taskSegmentControl.selectedSegmentIndex)
+        cell.taskName = cell.textLabel!.text
         cell.taskId = viewModel?.getTaskId(for: indexPath, status: taskSegmentControl.selectedSegmentIndex)
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = tableView.cellForRow(at: indexPath) as! TaskTableViewCell
         if setSelected {
             taskIdArray.append(cell.taskId ?? 0)
             cell.accessoryType = UITableViewCell.AccessoryType.checkmark
+        } else {
+            let button = UIButton(type: .custom)
+                 button.setTitle("Cancel", for: .normal)
+                 button.addTarget(self, action: #selector(cancelChangingState), for: .touchUpInside)
+                 //button.tag = indexPath.row
+                 cell.accessoryView = button
+            button.sizeToFit()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            tableView.deselectRow(at: indexPath, animated: false)
+            self.changeSate(id: cell.taskId ?? 0, name: cell.textLabel?.text ?? "")
         }
         
     }
