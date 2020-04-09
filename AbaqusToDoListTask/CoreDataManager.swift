@@ -194,6 +194,8 @@ class CoreDataManager: NSObject {
            let context = getMainContext()
            // Create Fetch Request
            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: TaskDataEntity)
+          //fetchRequest.predicate = NSPredicate(format: "(id == '\(taskModel.id)')")
+        
            // Create Batch Delete Request
            let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
            do {
@@ -203,9 +205,23 @@ class CoreDataManager: NSObject {
                print("Error")
            }
        }
-       
-
-
+       func deleteTasks(taskIdArray: [Int]) {
+                 let context = getMainContext()
+                for id in taskIdArray {
+                    // Create Fetch Request
+                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: TaskDataEntity)
+                    fetchRequest.predicate = NSPredicate(format: "(id == '\(id)')")
+                    // Create Batch Delete Request
+                    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                    do {
+                        try context.execute(batchDeleteRequest)
+                    } catch {
+                        // Error Handling
+                        print("Error")
+                    }
+        }
+                 
+             }
        func fetchTasks() -> [TasksModel]? {
            let context = getMainContext()
            var taskData = [TasksModel]()

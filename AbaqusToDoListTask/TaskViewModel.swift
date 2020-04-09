@@ -44,9 +44,9 @@ class ViewModel: NSObject {
           let filteredItems = taskResults?.filter { $0.state == state }
         return filteredItems ?? []
     }
-    func getTaskId(in indexPath: IndexPath) -> Int {
-        let dict = self.taskResults?[indexPath.row]
-        return dict?.id ?? 0
+    func getTaskId(for indexPath: IndexPath, status: Int) -> Int {
+        let dict : TasksModel = filterArray(state: status)[indexPath.row] as! TasksModel
+        return dict.id
       
     }
     func getTaskName(for indexPath: IndexPath, status: Int) -> String {

@@ -9,7 +9,8 @@
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
-
+    
+    var taskId : Int?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
