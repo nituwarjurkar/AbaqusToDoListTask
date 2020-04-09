@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2052EABE243E2BC3008FBD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EABD243E2BC3008FBD2D /* AppDelegate.swift */; };
+		2052EAC0243E2BC3008FBD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EABF243E2BC3008FBD2D /* SceneDelegate.swift */; };
+		2052EAC2243E2BC3008FBD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAC1243E2BC3008FBD2D /* ViewController.swift */; };
+		2052EAC5243E2BC3008FBD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2052EAC3243E2BC3008FBD2D /* Main.storyboard */; };
+		2052EAC8243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAC6243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld */; };
+		2052EACA243E2BC7008FBD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2052EAC9243E2BC7008FBD2D /* Assets.xcassets */; };
+		2052EACD243E2BC7008FBD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2052EACB243E2BC7008FBD2D /* LaunchScreen.storyboard */; };
+		2052EAD8243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAD7243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift */; };
+		2052EAE3243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAE2243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift */; };
+		280CFADE243E2F2300B8CCEA /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFADD243E2F2300B8CCEA /* Loader.swift */; };
+		280CFAE0243E2FEE00B8CCEA /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFADF243E2FEE00B8CCEA /* Tasks.swift */; };
+		280CFAE3243E310E00B8CCEA /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE2243E310E00B8CCEA /* TaskViewController.swift */; };
+		280CFAE6243E315500B8CCEA /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE5243E315500B8CCEA /* TaskTableViewCell.swift */; };
+		280CFAE8243E390300B8CCEA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE7243E390300B8CCEA /* APIClient.swift */; };
+		280CFAEA243E3A3400B8CCEA /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE9243E3A3400B8CCEA /* TaskViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2052EAD4243E2BC7008FBD2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2052EAB2243E2BC3008FBD2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2052EAB9243E2BC3008FBD2D;
+			remoteInfo = AbaqusToDoListTask;
+		};
+		2052EADF243E2BC7008FBD2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2052EAB2243E2BC3008FBD2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2052EAB9243E2BC3008FBD2D;
+			remoteInfo = AbaqusToDoListTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2052EABA243E2BC3008FBD2D /* AbaqusToDoListTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbaqusToDoListTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2052EABD243E2BC3008FBD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2052EABF243E2BC3008FBD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2052EAC1243E2BC3008FBD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2052EAC4243E2BC3008FBD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2052EAC7243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AbaqusToDoListTask.xcdatamodel; sourceTree = "<group>"; };
+		2052EAC9243E2BC7008FBD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2052EACC243E2BC7008FBD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2052EACE243E2BC7008FBD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2052EAD3243E2BC7008FBD2D /* AbaqusToDoListTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbaqusToDoListTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2052EAD7243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbaqusToDoListTaskTests.swift; sourceTree = "<group>"; };
+		2052EAD9243E2BC7008FBD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2052EADE243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbaqusToDoListTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2052EAE2243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbaqusToDoListTaskUITests.swift; sourceTree = "<group>"; };
+		2052EAE4243E2BC7008FBD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280CFADD243E2F2300B8CCEA /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		280CFADF243E2FEE00B8CCEA /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		280CFAE2243E310E00B8CCEA /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		280CFAE5243E315500B8CCEA /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		280CFAE7243E390300B8CCEA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		280CFAE9243E3A3400B8CCEA /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2052EAB7243E2BC3008FBD2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2052EAD0243E2BC7008FBD2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2052EADB243E2BC7008FBD2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2052EAB1243E2BC3008FBD2D = {
+			isa = PBXGroup;
+			children = (
+				2052EABC243E2BC3008FBD2D /* AbaqusToDoListTask */,
+				2052EAD6243E2BC7008FBD2D /* AbaqusToDoListTaskTests */,
+				2052EAE1243E2BC7008FBD2D /* AbaqusToDoListTaskUITests */,
+				2052EABB243E2BC3008FBD2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2052EABB243E2BC3008FBD2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2052EABA243E2BC3008FBD2D /* AbaqusToDoListTask.app */,
+				2052EAD3243E2BC7008FBD2D /* AbaqusToDoListTaskTests.xctest */,
+				2052EADE243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2052EABC243E2BC3008FBD2D /* AbaqusToDoListTask */ = {
+			isa = PBXGroup;
+			children = (
+				280CFADC243E2EDD00B8CCEA /* Services */,
+				280CFADB243E2EC600B8CCEA /* ViewModel */,
+				280CFADA243E2EBD00B8CCEA /* View */,
+				280CFAD9243E2EAE00B8CCEA /* Model */,
+				280CFAD8243E2E9A00B8CCEA /* CoreDataClass */,
+				280CFAD7243E2E7700B8CCEA /* AppDelegate */,
+				280CFAD6243E2E5A00B8CCEA /* Utilities */,
+				2052EABD243E2BC3008FBD2D /* AppDelegate.swift */,
+				2052EABF243E2BC3008FBD2D /* SceneDelegate.swift */,
+				2052EAC1243E2BC3008FBD2D /* ViewController.swift */,
+				2052EAC3243E2BC3008FBD2D /* Main.storyboard */,
+				2052EAC9243E2BC7008FBD2D /* Assets.xcassets */,
+				2052EACB243E2BC7008FBD2D /* LaunchScreen.storyboard */,
+				2052EACE243E2BC7008FBD2D /* Info.plist */,
+				2052EAC6243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld */,
+			);
+			path = AbaqusToDoListTask;
+			sourceTree = "<group>";
+		};
+		2052EAD6243E2BC7008FBD2D /* AbaqusToDoListTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				2052EAD7243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift */,
+				2052EAD9243E2BC7008FBD2D /* Info.plist */,
+			);
+			path = AbaqusToDoListTaskTests;
+			sourceTree = "<group>";
+		};
+		2052EAE1243E2BC7008FBD2D /* AbaqusToDoListTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2052EAE2243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift */,
+				2052EAE4243E2BC7008FBD2D /* Info.plist */,
+			);
+			path = AbaqusToDoListTaskUITests;
+			sourceTree = "<group>";
+		};
+		280CFAD6243E2E5A00B8CCEA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				280CFADD243E2F2300B8CCEA /* Loader.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		280CFAD7243E2E7700B8CCEA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		280CFAD8243E2E9A00B8CCEA /* CoreDataClass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreDataClass;
+			sourceTree = "<group>";
+		};
+		280CFAD9243E2EAE00B8CCEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				280CFADF243E2FEE00B8CCEA /* Tasks.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		280CFADA243E2EBD00B8CCEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				280CFAE1243E30D400B8CCEA /* Task Controller */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		280CFADB243E2EC600B8CCEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				280CFAE9243E3A3400B8CCEA /* TaskViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		280CFADC243E2EDD00B8CCEA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				280CFAE7243E390300B8CCEA /* APIClient.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		280CFAE1243E30D400B8CCEA /* Task Controller */ = {
+			isa = PBXGroup;
+			children = (
+				280CFAE2243E310E00B8CCEA /* TaskViewController.swift */,
+				280CFAE5243E315500B8CCEA /* TaskTableViewCell.swift */,
+			);
+			name = "Task Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2052EAB9243E2BC3008FBD2D /* AbaqusToDoListTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2052EAE7243E2BC7008FBD2D /* Build configuration list for PBXNativeTarget "AbaqusToDoListTask" */;
+			buildPhases = (
+				2052EAB6243E2BC3008FBD2D /* Sources */,
+				2052EAB7243E2BC3008FBD2D /* Frameworks */,
+				2052EAB8243E2BC3008FBD2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AbaqusToDoListTask;
+			productName = AbaqusToDoListTask;
+			productReference = 2052EABA243E2BC3008FBD2D /* AbaqusToDoListTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2052EAD2243E2BC7008FBD2D /* AbaqusToDoListTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2052EAEA243E2BC7008FBD2D /* Build configuration list for PBXNativeTarget "AbaqusToDoListTaskTests" */;
+			buildPhases = (
+				2052EACF243E2BC7008FBD2D /* Sources */,
+				2052EAD0243E2BC7008FBD2D /* Frameworks */,
+				2052EAD1243E2BC7008FBD2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2052EAD5243E2BC7008FBD2D /* PBXTargetDependency */,
+			);
+			name = AbaqusToDoListTaskTests;
+			productName = AbaqusToDoListTaskTests;
+			productReference = 2052EAD3243E2BC7008FBD2D /* AbaqusToDoListTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2052EADD243E2BC7008FBD2D /* AbaqusToDoListTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2052EAED243E2BC7008FBD2D /* Build configuration list for PBXNativeTarget "AbaqusToDoListTaskUITests" */;
+			buildPhases = (
+				2052EADA243E2BC7008FBD2D /* Sources */,
+				2052EADB243E2BC7008FBD2D /* Frameworks */,
+				2052EADC243E2BC7008FBD2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2052EAE0243E2BC7008FBD2D /* PBXTargetDependency */,
+			);
+			name = AbaqusToDoListTaskUITests;
+			productName = AbaqusToDoListTaskUITests;
+			productReference = 2052EADE243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2052EAB2243E2BC3008FBD2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ecsion Research Labs Pvt. Ltd.";
+				TargetAttributes = {
+					2052EAB9243E2BC3008FBD2D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					2052EAD2243E2BC7008FBD2D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 2052EAB9243E2BC3008FBD2D;
+					};
+					2052EADD243E2BC7008FBD2D = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 2052EAB9243E2BC3008FBD2D;
+					};
+				};
+			};
+			buildConfigurationList = 2052EAB5243E2BC3008FBD2D /* Build configuration list for PBXProject "AbaqusToDoListTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2052EAB1243E2BC3008FBD2D;
+			productRefGroup = 2052EABB243E2BC3008FBD2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2052EAB9243E2BC3008FBD2D /* AbaqusToDoListTask */,
+				2052EAD2243E2BC7008FBD2D /* AbaqusToDoListTaskTests */,
+				2052EADD243E2BC7008FBD2D /* AbaqusToDoListTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2052EAB8243E2BC3008FBD2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2052EACD243E2BC7008FBD2D /* LaunchScreen.storyboard in Resources */,
+				2052EACA243E2BC7008FBD2D /* Assets.xcassets in Resources */,
+				2052EAC5243E2BC3008FBD2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2052EAD1243E2BC7008FBD2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2052EADC243E2BC7008FBD2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2052EAB6243E2BC3008FBD2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280CFAE6243E315500B8CCEA /* TaskTableViewCell.swift in Sources */,
+				2052EAC2243E2BC3008FBD2D /* ViewController.swift in Sources */,
+				280CFAE3243E310E00B8CCEA /* TaskViewController.swift in Sources */,
+				280CFAEA243E3A3400B8CCEA /* TaskViewModel.swift in Sources */,
+				2052EAC8243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld in Sources */,
+				2052EABE243E2BC3008FBD2D /* AppDelegate.swift in Sources */,
+				2052EAC0243E2BC3008FBD2D /* SceneDelegate.swift in Sources */,
+				280CFAE0243E2FEE00B8CCEA /* Tasks.swift in Sources */,
+				280CFADE243E2F2300B8CCEA /* Loader.swift in Sources */,
+				280CFAE8243E390300B8CCEA /* APIClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2052EACF243E2BC7008FBD2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2052EAD8243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2052EADA243E2BC7008FBD2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2052EAE3243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2052EAD5243E2BC7008FBD2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2052EAB9243E2BC3008FBD2D /* AbaqusToDoListTask */;
+			targetProxy = 2052EAD4243E2BC7008FBD2D /* PBXContainerItemProxy */;
+		};
+		2052EAE0243E2BC7008FBD2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2052EAB9243E2BC3008FBD2D /* AbaqusToDoListTask */;
+			targetProxy = 2052EADF243E2BC7008FBD2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2052EAC3243E2BC3008FBD2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2052EAC4243E2BC3008FBD2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2052EACB243E2BC7008FBD2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2052EACC243E2BC7008FBD2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2052EAE5243E2BC7008FBD2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2052EAE6243E2BC7008FBD2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2052EAE8243E2BC7008FBD2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ549YKH93;
+				INFOPLIST_FILE = AbaqusToDoListTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ecsion.AbaqusToDoListTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2052EAE9243E2BC7008FBD2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ549YKH93;
+				INFOPLIST_FILE = AbaqusToDoListTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ecsion.AbaqusToDoListTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2052EAEB243E2BC7008FBD2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ549YKH93;
+				INFOPLIST_FILE = AbaqusToDoListTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ecsion.AbaqusToDoListTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbaqusToDoListTask.app/AbaqusToDoListTask";
+			};
+			name = Debug;
+		};
+		2052EAEC243E2BC7008FBD2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ549YKH93;
+				INFOPLIST_FILE = AbaqusToDoListTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ecsion.AbaqusToDoListTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbaqusToDoListTask.app/AbaqusToDoListTask";
+			};
+			name = Release;
+		};
+		2052EAEE243E2BC7008FBD2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ549YKH93;
+				INFOPLIST_FILE = AbaqusToDoListTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ecsion.AbaqusToDoListTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AbaqusToDoListTask;
+			};
+			name = Debug;
+		};
+		2052EAEF243E2BC7008FBD2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ549YKH93;
+				INFOPLIST_FILE = AbaqusToDoListTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ecsion.AbaqusToDoListTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AbaqusToDoListTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2052EAB5243E2BC3008FBD2D /* Build configuration list for PBXProject "AbaqusToDoListTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2052EAE5243E2BC7008FBD2D /* Debug */,
+				2052EAE6243E2BC7008FBD2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2052EAE7243E2BC7008FBD2D /* Build configuration list for PBXNativeTarget "AbaqusToDoListTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2052EAE8243E2BC7008FBD2D /* Debug */,
+				2052EAE9243E2BC7008FBD2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2052EAEA243E2BC7008FBD2D /* Build configuration list for PBXNativeTarget "AbaqusToDoListTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2052EAEB243E2BC7008FBD2D /* Debug */,
+				2052EAEC243E2BC7008FBD2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2052EAED243E2BC7008FBD2D /* Build configuration list for PBXNativeTarget "AbaqusToDoListTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2052EAEE243E2BC7008FBD2D /* Debug */,
+				2052EAEF243E2BC7008FBD2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2052EAC6243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2052EAC7243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodel */,
+			);
+			currentVersion = 2052EAC7243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodel */;
+			path = AbaqusToDoListTask.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2052EAB2243E2BC3008FBD2D /* Project object */;
+}
