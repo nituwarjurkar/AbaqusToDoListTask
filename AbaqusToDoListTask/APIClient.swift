@@ -8,7 +8,7 @@
 import Foundation
 class APIClient: NSObject {
     
-    func fetchUsersList(completion: @escaping ([Tasks]?) -> Void) {
+    func fetchUsersList(completion: @escaping ([TasksModel]?) -> Void) {
         
         guard let url = URL(string:"https://my-json-server.typicode.com/karthikraj-duraisamy/todoendpoint/tasks") else {
             print("Error unwrapping URL")
@@ -23,7 +23,7 @@ class APIClient: NSObject {
             do {
                 let decoder = JSONDecoder()
                 do {
-                    let result = try decoder.decode([Tasks].self, from: unwrappedData)
+                    let result = try decoder.decode([TasksModel].self, from: unwrappedData)
                     print(result)
                     completion(result)
                 } catch { print(error) }

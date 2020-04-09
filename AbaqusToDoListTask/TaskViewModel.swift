@@ -9,30 +9,32 @@
 import Foundation
 class ViewModel: NSObject {
    //var apiClient: APIClient!
-    var taskResults : [Tasks]? = []
+    var taskResults : [TasksModel]? = []
     
     
-    func getUsers(completionHandler: @escaping (Bool) -> Void) {
-        APIClient().fetchUsersList { (users) in
+    func getTasks(completionHandler: @escaping (Bool) -> Void) {
+        APIClient().fetchUsersList { (tasks) in
             DispatchQueue.main.async {
-                self.taskResults = users
+                self.taskResults = tasks
                  
-//                for i in users! {
-//                    let tskDic = [ "id" : i.id,
-//                                   "task" : i.task,
-//                                   "state" : i.state
-//                        ] as [String : Any]
-//                    self.taskResults?.append(tskDic)
-//                    // CoreDataManager.shared.saveUserData(userModel: i)
-//
-//                }
-           // let userDetails = CoreDataManager.shared.fetchUsers()
-            //self.coreDataResults = userDetails
-                //print("task : \(self.taskResults)")
-                   
+                for task in tasks! {
+                     CoreDataManager.shared.saveTaskData(taskModel: task)
+                }
+            let taskDetails = CoreDataManager.shared.fetchTasks()
+            self.taskResults = taskDetails
+            
                 completionHandler(true)
             }
         }
+    }
+    func reloadTasks(completionHandler: @escaping (Bool) -> Void) {
+        DispatchQueue.main.async {
+                        
+                let taskDetails = CoreDataManager.shared.fetchTasks()
+                self.taskResults = taskDetails
+                   
+                completionHandler(true)
+    }
     }
     func numberOfTaskToDisplay(in section: Int) -> Int {
          
@@ -49,7 +51,7 @@ class ViewModel: NSObject {
     }
     func getTaskName(for indexPath: IndexPath, status: Int) -> String {
        
-        let dict : Tasks = filterArray(state: status)[indexPath.row] as! Tasks
+        let dict : TasksModel = filterArray(state: status)[indexPath.row] as! TasksModel
         return dict.task
     }
     func getTaskStatus(for indexPath: IndexPath) -> Int {

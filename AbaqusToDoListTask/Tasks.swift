@@ -7,7 +7,7 @@
 
 //
 
-struct Tasks : Decodable {
+struct TasksModel : Decodable {
     
     private enum CodingKeys : String, CodingKey {
         case id = "id"

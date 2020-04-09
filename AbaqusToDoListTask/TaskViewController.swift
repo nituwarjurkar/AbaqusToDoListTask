@@ -12,6 +12,7 @@ class TaskViewController: UIViewController {
      @IBOutlet var viewModel: ViewModel!
     @IBOutlet weak var taskSegmentControl: UISegmentedControl!
     
+    @IBOutlet weak var addTaskBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class TaskViewController: UIViewController {
          
     }
     func initViewModel(){
-       viewModel?.getUsers(completionHandler: { (result) in
+       viewModel?.getTasks(completionHandler: { (result) in
                    DispatchQueue.main.async {
                        if result {
                          //  self.loader.hideOverlayView()
@@ -29,10 +30,45 @@ class TaskViewController: UIViewController {
                    }
                })
     }
+    
+    @IBAction func AddTaskClicked(_ sender: UIBarButtonItem) {
+        createNewTask()
+    }
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         tableView.reloadData()
     }
-    
+    func createNewTask() {
+        let alertController = UIAlertController(title: "Add New Task", message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Task Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            self.insertTaskinDB(taskName: firstTextField.text ?? "")
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
+            (action : UIAlertAction!) -> Void in })
+       
+
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+    func insertTaskinDB(taskName: String) {
+        let lastId = CoreDataManager.shared.fetchLastId()
+        print(lastId)
+        let taskModel = TasksModel(id: lastId, task: taskName, state: 0)
+        CoreDataManager.shared.saveTaskData(taskModel: taskModel)
+        viewModel?.reloadTasks(completionHandler: { (result) in
+                          DispatchQueue.main.async {
+                              if result {
+                                //  self.loader.hideOverlayView()
+                                  self.tableView.reloadData()
+                              }
+                          }
+                      })
+    }
 
 }
 extension TaskViewController : UITableViewDelegate, UITableViewDataSource {
