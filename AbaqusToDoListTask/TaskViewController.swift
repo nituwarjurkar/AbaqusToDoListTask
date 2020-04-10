@@ -88,6 +88,9 @@ class TaskViewController: UIViewController {
                     self.hideHUD()
                     if !showLoader {
                         self.refreshControl.endRefreshing()
+                        if self.taskSegmentControl.selectedSegmentIndex == 1 {
+                            self.navigationItem.rightBarButtonItem = nil
+                        }
                     }
                     self.tableView.reloadData()
                 }
