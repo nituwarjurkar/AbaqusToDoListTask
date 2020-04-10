@@ -11,7 +11,7 @@ import UIKit
 class TaskTableViewCell: UITableViewCell {
     
     var taskId : Int?
-    var taskName : String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

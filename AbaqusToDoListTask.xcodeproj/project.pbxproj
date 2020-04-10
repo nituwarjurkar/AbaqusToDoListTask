@@ -9,20 +9,20 @@
 /* Begin PBXBuildFile section */
 		2052EABE243E2BC3008FBD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EABD243E2BC3008FBD2D /* AppDelegate.swift */; };
 		2052EAC0243E2BC3008FBD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EABF243E2BC3008FBD2D /* SceneDelegate.swift */; };
-		2052EAC2243E2BC3008FBD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAC1243E2BC3008FBD2D /* ViewController.swift */; };
 		2052EAC5243E2BC3008FBD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2052EAC3243E2BC3008FBD2D /* Main.storyboard */; };
 		2052EAC8243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAC6243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld */; };
 		2052EACA243E2BC7008FBD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2052EAC9243E2BC7008FBD2D /* Assets.xcassets */; };
 		2052EACD243E2BC7008FBD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2052EACB243E2BC7008FBD2D /* LaunchScreen.storyboard */; };
 		2052EAD8243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAD7243E2BC7008FBD2D /* AbaqusToDoListTaskTests.swift */; };
 		2052EAE3243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052EAE2243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift */; };
-		280CFADE243E2F2300B8CCEA /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFADD243E2F2300B8CCEA /* Loader.swift */; };
 		280CFAE0243E2FEE00B8CCEA /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFADF243E2FEE00B8CCEA /* Tasks.swift */; };
 		280CFAE3243E310E00B8CCEA /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE2243E310E00B8CCEA /* TaskViewController.swift */; };
 		280CFAE6243E315500B8CCEA /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE5243E315500B8CCEA /* TaskTableViewCell.swift */; };
 		280CFAE8243E390300B8CCEA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE7243E390300B8CCEA /* APIClient.swift */; };
 		280CFAEA243E3A3400B8CCEA /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAE9243E3A3400B8CCEA /* TaskViewModel.swift */; };
 		280CFAEC243EBB2F00B8CCEA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAEB243EBB2F00B8CCEA /* CoreDataManager.swift */; };
+		280CFAF6243F96F900B8CCEA /* ALLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAF5243F96F900B8CCEA /* ALLoadingView.swift */; };
+		280CFAFA244079EF00B8CCEA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CFAF9244079EF00B8CCEA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		2052EABA243E2BC3008FBD2D /* AbaqusToDoListTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbaqusToDoListTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2052EABD243E2BC3008FBD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2052EABF243E2BC3008FBD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2052EAC1243E2BC3008FBD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2052EAC4243E2BC3008FBD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2052EAC7243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AbaqusToDoListTask.xcdatamodel; sourceTree = "<group>"; };
 		2052EAC9243E2BC7008FBD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,13 +57,14 @@
 		2052EADE243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbaqusToDoListTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2052EAE2243E2BC7008FBD2D /* AbaqusToDoListTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbaqusToDoListTaskUITests.swift; sourceTree = "<group>"; };
 		2052EAE4243E2BC7008FBD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		280CFADD243E2F2300B8CCEA /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		280CFADF243E2FEE00B8CCEA /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		280CFAE2243E310E00B8CCEA /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		280CFAE5243E315500B8CCEA /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		280CFAE7243E390300B8CCEA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		280CFAE9243E3A3400B8CCEA /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		280CFAEB243EBB2F00B8CCEA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		280CFAF5243F96F900B8CCEA /* ALLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALLoadingView.swift; sourceTree = "<group>"; };
+		280CFAF9244079EF00B8CCEA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +122,7 @@
 				280CFAD8243E2E9A00B8CCEA /* CoreDataClass */,
 				280CFAD7243E2E7700B8CCEA /* AppDelegate */,
 				280CFAD6243E2E5A00B8CCEA /* Utilities */,
-				2052EABD243E2BC3008FBD2D /* AppDelegate.swift */,
 				2052EABF243E2BC3008FBD2D /* SceneDelegate.swift */,
-				2052EAC1243E2BC3008FBD2D /* ViewController.swift */,
 				2052EAC3243E2BC3008FBD2D /* Main.storyboard */,
 				2052EAC9243E2BC7008FBD2D /* Assets.xcassets */,
 				2052EACB243E2BC7008FBD2D /* LaunchScreen.storyboard */,
@@ -155,7 +153,8 @@
 		280CFAD6243E2E5A00B8CCEA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				280CFADD243E2F2300B8CCEA /* Loader.swift */,
+				280CFAF5243F96F900B8CCEA /* ALLoadingView.swift */,
+				280CFAF9244079EF00B8CCEA /* Extensions.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 		280CFAD7243E2E7700B8CCEA /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				2052EABD243E2BC3008FBD2D /* AppDelegate.swift */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -348,15 +348,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				280CFAE6243E315500B8CCEA /* TaskTableViewCell.swift in Sources */,
-				2052EAC2243E2BC3008FBD2D /* ViewController.swift in Sources */,
 				280CFAE3243E310E00B8CCEA /* TaskViewController.swift in Sources */,
 				280CFAEA243E3A3400B8CCEA /* TaskViewModel.swift in Sources */,
+				280CFAF6243F96F900B8CCEA /* ALLoadingView.swift in Sources */,
 				2052EAC8243E2BC4008FBD2D /* AbaqusToDoListTask.xcdatamodeld in Sources */,
 				2052EABE243E2BC3008FBD2D /* AppDelegate.swift in Sources */,
 				2052EAC0243E2BC3008FBD2D /* SceneDelegate.swift in Sources */,
 				280CFAE0243E2FEE00B8CCEA /* Tasks.swift in Sources */,
-				280CFADE243E2F2300B8CCEA /* Loader.swift in Sources */,
 				280CFAE8243E390300B8CCEA /* APIClient.swift in Sources */,
+				280CFAFA244079EF00B8CCEA /* Extensions.swift in Sources */,
 				280CFAEC243EBB2F00B8CCEA /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
